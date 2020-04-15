@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     // fetch is a function. It is an asynchronus function so you will need a call back function or method to get the information.
     // a function is called by name like fetch. a method is associated to an object
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data)  => {
             if(data.error) {
                 console.log(data.error)
